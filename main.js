@@ -1,12 +1,12 @@
 const express = require('express');
 const app = express();
-let Esquema = null;
+let cuadro = null;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.get("/con", (req, res) => {
-    Esquema = require('./database');
+    cuadro = require('./database');
     return res.send("OK");
 });
 
